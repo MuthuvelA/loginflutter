@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Image.asset(
-                              'lib/assets/loginsit.png',
+                              'lib/assets/login-sit.png',
                               width: 200,
                               height: 200,
                             ),
@@ -63,8 +63,8 @@ class MyApp extends StatelessWidget {
                                   'Hello, Welcome Back',
                                   style: TextStyle(
                                     fontSize: 26,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'Poppins-Bold',
+                                    fontWeight: FontWeight.w900,
+                                    fontFamily: 'Poppins-bold',
                                   ),
                                   textAlign: TextAlign.left,
                                 ),
@@ -72,8 +72,8 @@ class MyApp extends StatelessWidget {
                                 Text(
                                   'Happy to see you again,\nto use your account please login first.',
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: 'Poppins-Bold',
+                                    fontWeight: FontWeight.w100,
+                                    fontFamily: 'Poppins-bold',
                                   ),
                                   textAlign: TextAlign.left,
                                 ),

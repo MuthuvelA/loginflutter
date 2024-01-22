@@ -27,8 +27,11 @@ flutter:
     - family: Poppins
       fonts:
         - asset: lib/assets/fonts/Poppins-Thin.ttf
+    - family: Poppins-bold
+      fonts:
+        - asset: lib/assets/fonts/Poppins-SemiBold.ttf
   assets:
-    - lib/assets/loginsit.png
+    - lib/assets/login-sit.png
 
   uses-material-design: true
 
