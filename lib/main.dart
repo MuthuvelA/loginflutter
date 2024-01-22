@@ -13,75 +13,84 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       home: Scaffold(
-        body: ListView(
-          physics: NeverScrollableScrollPhysics(),
-          children: [
-            Expanded(
-              child: Center(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                    maxWidth: 400,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                              border: Border.all(color: Colors.black),
+        body: Center(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 400,
+            ),
+            child: Stack(
+              alignment: Alignment.topLeft,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                            border: Border.all(color: Colors.black),
+                          ),
+                          child: IconButton(
+                            icon: const Icon(
+                              Icons.arrow_back,
+                              color: Colors.black,
+                              size: 22,
                             ),
-                            child: IconButton(
-                              icon: Icon(
-                                Icons.arrow_back,
-                                color: Colors.black,
-                              ),
-                              onPressed: () {},
-                            ),
+                            onPressed: () {},
                           ),
                         ),
                       ),
-                      Transform.translate(
-                        offset: const Offset(0.0, -60.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image.asset(
+                    ),
+                    Transform.translate(
+                      offset: const Offset(0.0, 50.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Transform.translate(
+                            offset: const Offset(0.0, -20.0), // Adjust as needed
+                            child: Image.asset(
                               'lib/assets/login-sit.png',
-                              width: 200,
-                              height: 200,
+                              width: 150,
+                              height: 250,
                             ),
-                            SizedBox(height: 8),
-                            const Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                          ),
+                          SizedBox(height: 0.0),
+                          Transform.translate(
+                            offset: const Offset(10.0, -160.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
                                 Text(
                                   'Hello, Welcome Back',
                                   style: TextStyle(
                                     fontSize: 26,
-                                    fontWeight: FontWeight.w900,
+                                    fontWeight: FontWeight.w500,
                                     fontFamily: 'Poppins-bold',
                                   ),
                                   textAlign: TextAlign.left,
                                 ),
                                 SizedBox(height: 8),
                                 Text(
-                                  'Happy to see you again,\nto use your account please login first.',
+                                  'Happy to see you again, to use your\naccount please login first.',
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w100,
-                                    fontFamily: 'Poppins-bold',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal,
+                                    fontFamily: 'Poppins-Bold',
                                   ),
                                   textAlign: TextAlign.left,
                                 ),
                               ],
                             ),
-                            SizedBox(height: 32),
-                            const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 16),
+                          ),
+                          SizedBox(height: 0),
+                          Transform.translate(
+                            offset: const Offset(5.0, -125.0), // Adjust as needed
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -93,7 +102,7 @@ class MyApp extends StatelessWidget {
                                       fontFamily: 'Poppins',
                                     ),
                                   ),
-                                  SizedBox(height: 8),
+                                  SizedBox(height: 0.0),
                                   TextField(
                                     style: TextStyle(
                                       fontWeight: FontWeight.w800,
@@ -103,9 +112,12 @@ class MyApp extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 16),
-                            const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 16),
+                          ),
+                          SizedBox(height: 26),
+                          Transform.translate(
+                            offset: const Offset(5.0, -120.0), // Adjust as needed
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -117,7 +129,7 @@ class MyApp extends StatelessWidget {
                                       fontFamily: 'Poppins',
                                     ),
                                   ),
-                                  SizedBox(height: 8),
+                                  SizedBox(height: 0),
                                   TextField(
                                     style: TextStyle(
                                       fontWeight: FontWeight.w900,
@@ -128,36 +140,48 @@ class MyApp extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 16),
-                            Row(
+                          ),
+                          SizedBox(height: 16),
+                          Transform.translate(
+                            offset: const Offset(5.0, -130.0), // Adjust as needed
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 TextButton(
                                   onPressed: () {},
-                                  child: Text('Forgot Password?'),
+                                  child: const Text(
+                                    'Forgot Password?',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontFamily: 'Poppins',
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
-                            SizedBox(height: 4),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                          ),
+                          SizedBox(height: 5),
+                          Transform.translate(
+                            offset: const Offset(5.0, -125.0), // Adjust as needed
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10),
                               child: ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
                                   primary: custom,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8.0),
+                                    borderRadius: BorderRadius.circular(16.0),
                                   ),
                                 ),
                                 child: Container(
-                                  padding: EdgeInsets.all(16),
+                                  padding: EdgeInsets.all(10),
                                   child: const Center(
                                     child: Text(
                                       'Login',
                                       style: TextStyle(
                                         fontSize: 20,
                                         color: Colors.white,
-                                        fontWeight: FontWeight.w700,
+                                        fontWeight: FontWeight.w900,
                                         fontFamily: 'Poppins',
                                       ),
                                     ),
@@ -165,15 +189,15 @@ class MyApp extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
